@@ -9,6 +9,7 @@ body {
   position: relative;
   color: hsl(0, 0%, 100%);
   font-family: "Open Sans", sans-serif;
+  line-height: 145%;
 }
 
 p {
@@ -43,16 +44,17 @@ li a {
   font-family: "Raleway", sans-serif;
 }
 
+li a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
 .png-intro {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
   background-color: hsl(217, 28%, 15%);
-}
-
-.curvy {
-  margin-top: 50px;
 }
 
 .intro-text {
@@ -80,12 +82,17 @@ button {
   font-family: "Raleway", sans-serif;
 }
 
+button:hover {
+  background-image: none;
+  background-color: hsl(176, 68%, 64%);
+}
+
 .features-div {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   width: 80%;
-  top: 900px;
+  top: 1000px;
   right: 10%;
   left: 10%;
   position: absolute;
@@ -106,7 +113,7 @@ button {
   flex-direction: row;
   justify-content: space-around;
   width: 90%;
-  top: 1400px;
+  top: 1600px;
   right: 5%;
   left: 5%;
   position: absolute;
@@ -124,6 +131,11 @@ button {
   color: hsl(176, 68%, 64%);
 }
 
+#productive:hover {
+  color: hsl(0, 0%, 100%);
+  filter: grayscale(1);
+}
+
 .productive-png {
   width: 40%;
 }
@@ -131,14 +143,14 @@ button {
 .quote {
   z-index: 3;
   position: absolute;
-  top: 1850px;
+  top: 2050px;
   left: 5%;
 }
 
 .testimonial {
   z-index: 3;
   position: absolute;
-  top: 1870px;
+  top: 2070px;
   left: 5%;
   right: 5%;
   width: 90%;
@@ -179,7 +191,7 @@ h4 {
 .login {
   z-index: 3;
   position: absolute;
-  top: 2100px;
+  top: 2400px;
   left: 15%;
   right: 15%;
   width: 70%;
@@ -201,24 +213,39 @@ h4 {
   justify-content: center;
 }
 
-form {
+input[type="email"] {
   width: 75%;
   background-color: hsl(0, 0%, 100%);
   border: solid 1px hsl(218, 28%, 13%);
   border-radius: 20px;
   height: 35px;
-  margin: 10px;
+  margin-right: 30px;
 }
 
-.submit > button {
+::placeholder {
+  color: rgba(168, 164, 164, 0.7);
+  padding-left: 30px;
+}
+
+input[type="submit"] {
   width: 25%;
-  margin: 10px;
+  background-image: linear-gradient(
+    to right,
+    hsl(176, 68%, 64%),
+    hsl(198, 60%, 50%)
+  );
+  border: solid 1px hsl(218, 28%, 13%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  height: 35px;
+  font-size: smaller;
+  font-family: "Raleway", sans-serif;
 }
 
 footer {
   z-index: 2;
   position: absolute;
-  top: 2200px;
+  top: 2500px;
   width: 100%;
   padding: 150px 20px 30px 50px;
   background-color: hsl(216, 53%, 9%);
@@ -248,6 +275,15 @@ footer {
   padding-right: 40px;
 }
 
+.address {
+  display: flex;
+  flex-direction: row;
+}
+
+#location {
+  margin-right: 25px;
+}
+
 .pad {
   padding-right: 15px;
 }
@@ -261,6 +297,10 @@ footer {
   width: 50%;
 }
 
+.about > p:hover {
+  font-weight: 700;
+}
+
 .iconic {
   width: 13%;
   margin: 10px;
@@ -270,4 +310,5 @@ footer {
 .raleway {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
+  line-height: 155%;
 }
